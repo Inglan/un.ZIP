@@ -1,0 +1,29 @@
+{
+    "name": "un.ZIP - .ZIP TLD Blocker",
+    "manifest_version": 3,
+    "version": "1",
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*.zip/*"
+            ],
+            "js": [
+                "block.js"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "blocked.html"
+            ],
+            "matches": [
+                "*://*.zip/*"
+            ]
+        }
+    ],
+    "icons": {
+        "512": "icon-512.png"
+    }
+}
